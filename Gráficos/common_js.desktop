@@ -1,7 +1,12 @@
-[Desktop Entry]
-Version=1.0
-Type=Link
-Name=common.js
-Comment=
-Icon=user-bookmarks
-URL=https://github.com/IsaMaciel/Criando-gr-ficos-din-micos---3-tri/blob/main/common.js
+const getCSS = (variavel) => {
+    const bodyStyles = getComputedStyle(document.body)
+    return bodyStyles.getPropertyValue(variavel)
+}
+
+const tickConfig = {
+    family: getCSS('--font'),
+    size: 16,
+    color: getCSS('--primary-color')
+}
+
+export {getCSS, tickConfig}
